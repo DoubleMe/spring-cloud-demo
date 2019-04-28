@@ -15,7 +15,7 @@ public class HelloService {
     @Autowired
     RestTemplate restTemplate;
 
-    public String hiService(String name) {
+    public Object hiService(String name) {
 
         return restTemplate.getForObject("http://SERVICE-HI/demo?name=" + name, String.class);
     }
